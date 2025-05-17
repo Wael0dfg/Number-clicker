@@ -105,7 +105,7 @@
 <div class="modal-container">
   <div class="modal-header">
     <h2 class="modal-title">How To Use Number Clicker</h2>
-    <button class="close-btn" onclick="window.close()">×</button>
+    <button class="close-btn" onclick="goBackToMain()">×</button>
   </div>
   <div class="modal-content">
     <div class="step">
@@ -146,23 +146,27 @@
     </div>
     
     <div style="text-align: center; margin-top: 20px;">
-      <button onclick="window.close()">Close Guide</button>
+      <button onclick="goBackToMain()">Close Guide</button>
     </div>
   </div>
 </div>
 
 <script>
-  // Close the window when clicking outside the modal
+  function goBackToMain() {
+    window.location.href = 'index.html';
+  }
+
+  // Navigate back to main page when clicking outside the modal
   document.body.addEventListener('click', function(e) {
     if (e.target === document.body) {
-      window.close();
+      goBackToMain();
     }
   });
 
-  // Close with Escape key
+  // Navigate back with Escape key
   document.addEventListener('keydown', function(e) {
     if (e.key === "Escape") {
-      window.close();
+      goBackToMain();
     }
   });
 </script>
