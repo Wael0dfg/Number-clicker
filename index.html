@@ -419,18 +419,31 @@
   function incrementNumber() {
     currentNumber++;
     displayElement.textContent = currentNumber;
+    triggerNumberAnimation();
   }
 
   function resetNumber() {
     currentNumber = 0;
     displayElement.textContent = currentNumber;
+    triggerNumberAnimation();
   }
 
   function decrementNumber() {
     if (currentNumber > 0) {
       currentNumber--;
       displayElement.textContent = currentNumber;
+      triggerNumberAnimation();
     }
+  }
+
+  function triggerNumberAnimation() {
+    displayElement.classList.remove('number-change');
+    // Force reflow to restart animation
+    displayElement.offsetHeight;
+    displayElement.classList.add('number-change');
+    setTimeout(() => {
+      displayElement.classList.remove('number-change');
+    }, 300);
   }
 
   function saveProgress() {
