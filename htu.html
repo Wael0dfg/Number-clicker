@@ -298,48 +298,84 @@
 <div class="modal-container">
   <div class="modal-header">
     <h2 class="modal-title">How To Use Number Clicker</h2>
-    <button class="close-btn" onclick="goBackToMain()">×</button>
+    <button class="close-btn" onclick="goBackToMain()">
+      <i class="fas fa-times"></i>
+    </button>
   </div>
   <div class="modal-content">
     <div class="step">
-      <div class="step-title">1. Basic Counting</div>
-      <p>Click the <span class="button-label">Click Me</span> button to increment the counter by 1 each time.</p>
+      <div class="step-title">
+        <div class="step-icon">
+          <i class="fas fa-plus"></i>
+        </div>
+        1. Basic Counting
+      </div>
+      <p>Click the <span class="button-label"><i class="fas fa-plus"></i> Click Me</span> button to increment the counter by 1 each time.</p>
     </div>
     
     <div class="step">
-      <div class="step-title">2. Decreasing Count</div>
-      <p>Use the <span class="button-label">-1</span> button to decrease the count by 1 (won't go below 0).</p>
+      <div class="step-title">
+        <div class="step-icon">
+          <i class="fas fa-minus"></i>
+        </div>
+        2. Decreasing Count
+      </div>
+      <p>Use the <span class="button-label"><i class="fas fa-minus"></i> -1</span> button to decrease the count by 1 (won't go below 0).</p>
     </div>
     
     <div class="step">
-      <div class="step-title">3. Resetting</div>
-      <p>Press the <span class="button-label">Clear</span> button to reset the counter back to 0.</p>
+      <div class="step-title">
+        <div class="step-icon">
+          <i class="fas fa-redo"></i>
+        </div>
+        3. Resetting
+      </div>
+      <p>Press the <span class="button-label"><i class="fas fa-redo"></i> Clear</span> button to reset the counter back to 0.</p>
     </div>
     
     <div class="step">
-      <div class="step-title">4. Saving Progress</div>
-      <p>Click <span class="button-label">Save Progress</span> to download your current count as a JSON file.</p>
+      <div class="step-title">
+        <div class="step-icon">
+          <i class="fas fa-save"></i>
+        </div>
+        4. Saving Progress
+      </div>
+      <p>Click <span class="button-label"><i class="fas fa-save"></i> Save Progress</span> to download your current count as a JSON file.</p>
       <p>You can name the file whatever you want when prompted.</p>
     </div>
     
     <div class="step">
-      <div class="step-title">5. Loading Progress</div>
-      <p>Use <span class="button-label">Load Progress</span> to upload a previously saved JSON file.</p>
+      <div class="step-title">
+        <div class="step-icon">
+          <i class="fas fa-upload"></i>
+        </div>
+        5. Loading Progress
+      </div>
+      <p>Use <span class="button-label"><i class="fas fa-upload"></i> Load Progress</span> to upload a previously saved JSON file.</p>
       <p>This will restore your counter to the saved number.</p>
     </div>
     
     <div class="step">
-      <div class="step-title">Tips</div>
+      <div class="step-title">
+        <div class="step-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        Tips & Notes
+      </div>
       <ul>
         <li>The counter will never go below 0</li>
         <li>Saved files are in standard JSON format</li>
-        <li>Works on mobile devices too</li>
+        <li>Works perfectly on mobile devices</li>
         <li>Your count is only saved when you explicitly save it</li>
+        <li>Use the <span class="button-label"><i class="fas fa-question"></i></span> help button anytime for this guide</li>
       </ul>
     </div>
     
-    <div style="text-align: center; margin-top: 20px;">
-      <button onclick="goBackToMain()">Close Guide</button>
+    <div class="action-buttons">
+      <button class="btn-primary" onclick="goBackToMain()">
+        <i class="fas fa-arrow-left"></i>
+        Back to Counter
+      </button>
     </div>
   </div>
 </div>
