@@ -376,17 +376,38 @@
   }
 </style>
 </head>
-<body>
-
-<div id="numberDisplay" aria-live="polite">0</div>
-<div>
-  <button onclick="incrementNumber()">Click Me</button>
-  <button onclick="resetNumber()">Clear</button>
-  <button onclick="decrementNumber()">-1</button>
-  <button onclick="saveProgress()">Save Progress</button>
+<div class="container">
+  <h1 class="title">Number Clicker</h1>
+  <div id="numberDisplay" aria-live="polite">0</div>
+  
+  <div class="button-grid">
+    <button class="btn-primary" onclick="incrementNumber()">
+      <i class="fas fa-plus"></i>
+      Click Me
+    </button>
+    <button class="btn-secondary" onclick="decrementNumber()">
+      <i class="fas fa-minus"></i>
+      -1
+    </button>
+    <button class="btn-danger" onclick="resetNumber()">
+      <i class="fas fa-redo"></i>
+      Clear
+    </button>
+    <button class="btn-secondary" onclick="saveProgress()">
+      <i class="fas fa-save"></i>
+      Save Progress
+    </button>
+    <button class="btn-secondary" onclick="document.getElementById('loadFile').click()">
+      <i class="fas fa-upload"></i>
+      Load Progress
+    </button>
+  </div>
+  
   <input type="file" id="loadFile" accept=".json" onchange="loadProgress(event)">
-  <button onclick="document.getElementById('loadFile').click()">Load Progress</button>
-  <button onclick="location.href='htu.html'">?</button>
+  
+  <button class="btn-help" onclick="location.href='htu.html'" title="How to use">
+    <i class="fas fa-question"></i>
+  </button>
 </div>
 
 <script>
